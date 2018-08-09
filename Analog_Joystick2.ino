@@ -3,10 +3,10 @@
 // I add some delta to x and y so I consider two reading to be the same 
 // If they are within the delta
 
-// Arduino pin numbers
-const int SW_pin = 2; // digital pin connected to switch output
-const int X_pin = 0; // analog pin connected to X output
-const int Y_pin = 1; // analog pin connected to Y output
+// You can choose the pins you want but remember X and Y must be analog pins
+const int SW_pin = 2; // digital 
+const int X_pin = 0; // analog
+const int Y_pin = 1; // analog
 
 struct data {
   int sw;
@@ -37,6 +37,4 @@ void loop() {
     Serial.println(String(now.sw)+": "+ String(now.x) + " , "+ String(now.y));
   }
   previous = now;
-  delay(5); // not really necessary
-  
 }
